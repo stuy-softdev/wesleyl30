@@ -6,13 +6,23 @@
 # time spent: 1
 
 def sum_double(a, b):
-    return ((a + b) * (1 if a != b else 2))
+    return (a + b) * (1 if a != b else 2)
 
-sum_double(1, 2) #→ 3
-sum_double(3, 2) #→ 5
-sum_double(2, 2) #→ 8
-sum_double(-1, 0) #→ -1
-sum_double(3, 3) #→ 12
-sum_double(0, 0) #→ 0
-sum_double(0, 1) #→ 1
-sum_double(3, 4) #→ 7
+test_cases = [
+    (1, 2, 3),
+    (3, 2, 5),
+    (2, 2, 8),
+    (-1, 0, -1),
+    (3, 3, 12),
+    (0, 0, 0),
+    (0, 1, 1),
+    (3, 4, 7)
+]
+all_passed = True
+for a, b, expected in test_cases:
+    actual = sum_double(a, b)
+    print(f"Input: ({a}, {b}) | Expected: {expected} | Actual: {actual}")
+    if actual != expected:
+        all_passed = False
+
+print("All test cases passed!" if all_passed else "Some test cases failed.")

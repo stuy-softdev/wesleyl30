@@ -6,14 +6,24 @@
 # time spent: 1
 
 def makes10(a, b):
-  return (a + b == 10 or (b == 10 or a == 10))
+    return a + b == 10 or a == 10 or b == 10
 
-makes10(9, 10) #→ True
-makes10(9, 9) #→ False
-makes10(1, 9) #→ True
-makes10(10, 1) #→ True
-makes10(10, 10) #→ True
-makes10(8, 2) #→ True
-makes10(8, 3) #→ False
-makes10(10, 42) #→ True
-makes10(12, -2) #→ True
+test_cases = [
+    (9, 10, True),
+    (9, 9, False),
+    (1, 9, True),
+    (10, 1, True),
+    (10, 10, True),
+    (8, 2, True),
+    (8, 3, False),
+    (10, 42, True),
+    (12, -2, True)
+]
+all_passed = True
+for a, b, expected in test_cases:
+    actual = makes10(a, b)
+    print(f"Input: ({a}, {b}) | Expected: {expected} | Actual: {actual}")
+    if actual != expected:
+        all_passed = False
+
+print("All test cases passed!" if all_passed else "Some test cases failed.")
