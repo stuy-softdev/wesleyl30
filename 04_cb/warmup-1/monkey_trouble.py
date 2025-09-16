@@ -6,9 +6,20 @@
 # time spent: 1
 
 def monkey_trouble(a_smile, b_smile):
-    return (a_smile == b_smile)
+    return a_smile == b_smile
 
-monkey_trouble(True, True) #→ True
-monkey_trouble(False, False) #→ True
-monkey_trouble(True, False) #→ False
-monkey_trouble(False, True) #→ False
+test_cases = [
+    (True, True, True),
+    (False, False, True),
+    (True, False, False),
+    (False, True, False)
+]
+
+all_passed = True
+for a_smile, b_smile, expected in test_cases:
+    actual = monkey_trouble(a_smile, b_smile)
+    print(f"Input: ({a_smile}, {b_smile}) | Expected: {expected} | Actual: {actual}")
+    if actual != expected:
+        all_passed = False
+
+print("All test cases passed!" if all_passed else "Some test cases failed.")

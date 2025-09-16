@@ -6,9 +6,19 @@
 # time spent: 1
 
 def sleep_in(weekday, vacation):
-  return(not weekday or vacation)
-  
-sleep_in(False, False) #→ True
-sleep_in(True, False) #→ False
-sleep_in(False, True) #→ True
-sleep_in(True, True) #→ True
+    return not weekday or vacation
+
+test_cases = [
+    (False, False, True),
+    (True, False, False),
+    (False, True, True),
+    (True, True, True)
+]
+all_passed = True
+for weekday, vacation, expected in test_cases:
+    actual = sleep_in(weekday, vacation)
+    print(f"Input: ({weekday}, {vacation}) | Expected: {expected} | Actual: {actual}")
+    if actual != expected:
+        all_passed = False
+
+print("All test cases passed!" if all_passed else "Some test cases failed.")
