@@ -1,3 +1,10 @@
+# Wesley Leon
+# Ugly Duckies
+# SoftDev
+# K07: Grab Bag
+# 2025-09-17
+# time spent: 1.2
+
 import random
 with open('handles-n-quacks.csv', 'r') as file:
     content = file.read().split('\n')
