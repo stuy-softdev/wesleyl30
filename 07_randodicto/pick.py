@@ -14,6 +14,10 @@ with open('handles-n-quacks.csv', 'r') as file:
     names = [x[1] for x in vals if x[1] != '']
     duckiename = [x[2] for x in vals if x[1] != '']
 
+'''
+We sanatize the data by extracing the username and duckiename pairs from the csv and removing all empty usernames.
+We later replace all empty ducky names with "N/A"
+'''
 
 l = len(names)
 group1 = names[:l//3]
@@ -23,6 +27,9 @@ dgroup1 = duckiename[:l//3]
 dgroup2 = duckiename[l//3:(2 * l)//3]
 dgroup3 = duckiename[(2 * l)//3:]
 
+'''
+We seperated the data into thirds by using the index of the 1/3rd and 2/3rd point.
+'''
 
 # print(group1)
 # print(group2)
