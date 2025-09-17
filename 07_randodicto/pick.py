@@ -1,22 +1,30 @@
 import random
-with open('handles_gh', 'r') as file:
+with open('handles-n-quacks.csv', 'r') as file:
     content = file.read().split('\n')
-    names = [x for x in content if x != '']
+    vals = [x.split(',') for x in content if x != '']
+    vals = vals[1:]
+    vals.sort()
+    names = [x[1] for x in vals if x[1] != '']
+    duckiename = [x[2] for x in vals if x[1] != '']
 
 
-names.sort()
+l = len(names)
+group1 = names[:l//3]
+group2 = names[l//3:(2 * l)//3]
+group3 = names[(2 * l)//3:]
+dgroup1 = duckiename[:l//3]
+dgroup2 = duckiename[l//3:(2 * l)//3]
+dgroup3 = duckiename[(2 * l)//3:]
 
-group1 = names[:59//3]
-group2 = names[59//3:(2 * 59)//3]
-group3 = names[(2 * 59)//3:]
-#print(group1)
-#print(group2)
-#print(group3)
+
+# print(group1)
+# print(group2)
+# print(group3)
 
 
-dict1 = dict([(i, "Name") for i in group1])
-dict2 = dict([(i, "Name") for i in group2])
-dict3 = dict([(i, "Name") for i in group3])
+dict1 = dict([(group1[i], dgroup1[i] if dgroup1[i] != '' else "N/A") for i in range(len(group1))])
+dict2 = dict([(group2[i], dgroup2[i] if dgroup2[i] != '' else "N/A") for i in range(len(group2))])
+dict3 = dict([(group3[i], dgroup3[i] if dgroup3[i] != '' else "N/A") for i in range(len(group3))])
 print(dict1)
 print("\n")
 print(dict2)
