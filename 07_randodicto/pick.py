@@ -38,13 +38,16 @@ print(dict2)
 print("\n")
 print(dict3)
 print("\n")
-print("sorted the names and sepearated into three groups based on index")
+print("sorted the names and sepearated into three groups based on index" + "\n")
 
 group_1_member = group1[int(random.random() * len(group1))]
+print("Name from first 0% - 33%:")
 print(group_1_member, dict1[group_1_member])
 
+print("Name from first 33% - 66%:")
 group_2_member = group2[int(random.random() * len(group2))]
 print(group_2_member, dict2[group_2_member])
 
+print("Name from first 66% - 100%:")
 group_3_member = group3[int(random.random() * len(group3))]
 print(group_3_member, dict3[group_3_member])
