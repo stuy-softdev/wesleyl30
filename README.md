@@ -1,4 +1,4 @@
 ## Workshop
-# FRIST LSAT
-## sidekick: DUCKIENAME
+# Wesley Leon
+## sidekick: duckyo
 ### SoftDev 2025-2027
