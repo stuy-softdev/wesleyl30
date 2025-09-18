@@ -45,7 +45,7 @@ print(dict2)
 print("\n")
 print(dict3)
 print("\n")
-print("sorted the names and sepearated into three groups based on index" + "\n")
+print("sorted the names and seperated into three groups based on index" + "\n")
 
 group_1_member = group1[int(random.random() * len(group1))]
 print("Name from first 0% - 33%:")
