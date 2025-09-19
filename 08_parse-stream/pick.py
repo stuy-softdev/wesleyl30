@@ -18,8 +18,8 @@ with open('handles-n-quacks', 'r') as file:
 '''
 We took my code because it was a easy swap to the new format.
 We sanatize the data by extracing the username and duckiename pairs from the file and removing all empty usernames.
-We seperated by @@@ as newline and $$$ as ,
 We later replace all empty ducky names with "N/A"
+We seperated by @@@ as newline and $$$ as ,
 '''
 
 l = len(names)
