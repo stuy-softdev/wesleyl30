@@ -1,8 +1,8 @@
 # Wesley Leon
 # Ugly Duckies
 # SoftDev
-# K07: Grab Bag
-# 2025-09-17
+# K08: Tokens in the Stream
+# 2025-09-19
 # time spent: 1.2
 import random
 u_gh = 5
